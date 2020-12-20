@@ -24,7 +24,7 @@ public class UsingFixedThreadPool {
         executorService.shutdown();
 
         // cannot submit task after service is shutdown - rejected execution exception
-        executorService.execute(new LoopTaskA());
+//        executorService.execute(new LoopTaskA());
 
         System.out.println("Main thread ends");
     }
