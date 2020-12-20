@@ -13,7 +13,7 @@ public class UsingCachedThreadPool {
         System.out.println("Main thread starts");
 
         // Initialization - Create FixedThreadPool Executor service
-        ExecutorService executorService = Executors.newCachedThreadPool(); // at  concurrent threads
+        ExecutorService executorService = Executors.newCachedThreadPool(); // concurrent threads on pro-reta basis
 
         // Service - Submit task(s) to the service using execute()
         for (int i = 0; i < 6; i++) {
@@ -24,7 +24,7 @@ public class UsingCachedThreadPool {
         executorService.shutdown();
 
         // cannot submit task after service is shutdown - rejected execution exception
-        executorService.execute(new LoopTaskA());
+//        executorService.execute(new LoopTaskA());
 
         System.out.println("Main thread ends");
     }
