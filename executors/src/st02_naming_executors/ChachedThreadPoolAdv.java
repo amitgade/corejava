@@ -15,7 +15,7 @@ public class ChachedThreadPoolAdv {
 
         String currentThreadName = Thread.currentThread().getName();
 
-        System.out.println("]" + currentThreadName + "[ Main thread starts ...");
+        System.out.println("[" + currentThreadName + "] Main thread starts ...");
 
         // name thread Pool by using ThreadFactory instance as constructor argument
         ExecutorService executorService = Executors.newCachedThreadPool(new NamedThreadFactory());
@@ -35,7 +35,7 @@ public class ChachedThreadPoolAdv {
 
         executorService.shutdown();
 
-        System.out.println("]" + currentThreadName + "[ Main thread starts ..." );
+        System.out.println("[" + currentThreadName + "] Main thread starts ..." );
 
 
     }
