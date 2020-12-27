@@ -53,6 +53,12 @@ public class Rectangle {
 }
 
 
-
+class Test {
+    public static void main(String[] args) {
+        new Rectangle();
+        new Rectangle(4, 5);
+        new Rectangle(4, 5,34,56);
+    }
+}
 
 
