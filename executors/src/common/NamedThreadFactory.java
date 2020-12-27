@@ -12,6 +12,10 @@ public class NamedThreadFactory implements ThreadFactory {
 
     @Override
     public Thread newThread(Runnable r) {
+
+        // Runnable is generated and provided by JVM internally.
+        // It's not the runnable task that we submit to the executor service
+
         Thread t = new Thread(r, NAME + ++count);
         return t;
     }
