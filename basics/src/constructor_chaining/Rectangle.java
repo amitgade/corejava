@@ -45,6 +45,7 @@ public class Rectangle {
     // 3rd constructor
     public Rectangle(int x, int y, int width, int height) {
         // initialize variables
+        System.out.println("Constructor called.. variables initialing variables");
         this.x = x;
         this.y = y;
         this.width = width;
