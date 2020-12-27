@@ -14,7 +14,7 @@ public class NamingExecutorThreads {
 
         String currentThreadName = Thread.currentThread().getName();
 
-        System.out.println("]" + currentThreadName + "[ Main thread starts ...");
+        System.out.println("[" + currentThreadName + "] Main thread starts ...");
 
         // default way : thread will be named as - pool-M-thread-N
 //        ExecutorService executorService = Executors.newCachedThreadPool();
@@ -28,6 +28,6 @@ public class NamingExecutorThreads {
 
         executorService.shutdown();
 
-        System.out.println("]" + currentThreadName + "[ Main thread starts ..." );
+        System.out.println("[" + currentThreadName + "] Main thread ends ..." );
     }
 }
