@@ -1,4 +1,4 @@
-package st01_creating_and_running_executors;
+package sec01_creating_and_running_executors;
 
 import common.LoopTaskA;
 
@@ -8,12 +8,12 @@ import java.util.concurrent.Executors;
 /**
  * Created by amit on 20-Dec-2020
  */
-public class UsingSingleThreadExecutor {
+public class UsingFixedThreadPool {
     public static void main(String[] args) {
         System.out.println("Main thread starts");
 
         // Initialization - Create FixedThreadPool Executor service
-        ExecutorService executorService = Executors.newSingleThreadExecutor(); // at most 1 thread executing
+        ExecutorService executorService = Executors.newFixedThreadPool(3); // at the most 3 concurrent threads
 
         // Service - Submit task(s) to the service using execute()
         for (int i = 0; i < 6; i++) {
