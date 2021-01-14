@@ -17,7 +17,8 @@ public class UsingSingleThreadExecutor {
 
         // Service - Submit task(s) to the service using execute()
         for (int i = 0; i < 6; i++) {
-            executorService.execute(new LoopTaskA());
+            executorService.execute(new LoopTaskA()); // method coming from ExecutorService(I)
+//            executorService.submit(new LoopTaskA()); // method coming from Executor(I)
         }
 
         // Destruction - call shutdown on service
